@@ -28,7 +28,7 @@ export default function ParticlesBackground() {
 
   const options = useMemo<ISourceOptions>(() => {
     // dial density down further if user prefers reduced motion
-    const count = reduced ? 15 : 60;
+    const count = reduced ? 25 : 200;
 
     return {
       fpsLimit: 60,
@@ -48,11 +48,11 @@ export default function ParticlesBackground() {
         color: { value: "#ffffff" },
         shape: { type: "circle" },
         opacity: { value: 0.16, random: false, animation: { enable: false } },
-        size: { value: { min: 0.5, max: 1.8 }, animation: { enable: false } },
+        size: { value: { min: 2.5, max: 4.8 }, animation: { enable: false } },
         links: { enable: false },
         move: {
           enable: true,
-          speed: reduced ? 0.08 : 0.2,
+          speed: reduced ? 0.2 : 0.9,
           direction: "none",
           random: true,
           straight: false,
